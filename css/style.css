@@ -1,27 +1,11 @@
-p {
-    display: inline-block;
-    width: 400px;
-    color: white;
-    font-weight: 700
-}
 
-header {
-    background-color: blueviolet;
-    text-align: center;
-}
+/* Estilo para el efecto de sombra al pasar el cursor */
+.social-icon {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease; /* Transición suave */
+  }
 
-.introduccion {
-    background-color: palevioletred;
-    /*Color para el texto*/
-    color: black;
-    text-align: center;
-    font-weight: 100;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.logo {
-    text-align: center;
-}
+  /* Estilo para quitar la sombra cuando no se pasa el cursor */
+  .social-icon:hover {
+    box-shadow: none;
+  }
