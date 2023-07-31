@@ -1,2 +1,2 @@
 # CV
-CV en html, js y css
+CV creado durante el "Curso Profesional Desarrollo Web - códigofacilito - 2023"
