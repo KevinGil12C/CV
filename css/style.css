@@ -1,11 +1,282 @@
-
 /* Estilo para el efecto de sombra al pasar el cursor */
 .social-icon {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  /* Transición suave */
+}
+
+/* Estilo para quitar la sombra cuando no se pasa el cursor */
+.social-icon:hover {
+  box-shadow: none;
+}
+
+
+.container {
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 80%;
+  max-height: 90%;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+  padding: 1.8em;
+  overflow: scroll;
+}
+
+.contenedor-nombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.escribe {
+  width: 400px;
+  animation: escribiendo 6s steps(20) infinite, pleca 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: solid 3px;
+  font-family: monospace;
+  font-size: 33px;
+  color: #642B73;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/*Efecto de escribiendo*/
+@keyframes escribiendo {
+
+  0%,
+  100% {
+    width: 0;
   }
 
-  /* Estilo para quitar la sombra cuando no se pasa el cursor */
-  .social-icon:hover {
-    box-shadow: none;
+  40%,
+  60% {
+    width: 400px;
   }
+
+  90% {
+    width: 0;
+  }
+}
+
+@keyframes pleca {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*Formato de experiencia*/
+.sivenleo{
+  font-size: 20px;
+  border-top: 15px;
+}
+
+.sivenleo dt{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: italic;
+  color: #642B73;
+  padding: 16px;
+  border-bottom: solid 3px #c6426e;
+  font-size: 2em;
+  border-bottom: #c6426e solid 5px;
+  padding-bottom: em;
+}
+.sivenleo dd{
+  padding: 0.3em;
+  font-weight: 700;
+  font-style: italic;
+}
+.fa-heart{
+  color: #ffc400;
+}
+
+/* Estilo para el botón primario */
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón primario al pasar el cursor por encima */
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el botón primario cuando está presionado */
+.btn-primary:active {
+  background-color: #003f80;
+}
+
+/* Estilo para el botón primario cuando está deshabilitado */
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*Para el boton de cierre*/
+.action {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.close {
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: #c6426e;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  text-align: left;
+  text-justify: distribute-all-lines;
+  font-size: 1.3em;
+  padding: 1em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title-item {
+  border-bottom: solid 4px #c6426e;
+  font-size: 2em;
+  border-bottom: #c6426e solid 4px;
+  padding-bottom: 1em;
+}
+
+.position {
+  background-color: #c6426e;
+  color: white;
+  padding: 10px;
+  margin-right: 1em;
+}
+
+.title-desc{
+  text-align: center;
+}
+.descripcion{
+  margin-left: 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+p{
+  margin: 40px;
+  text-align: justify;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 30;
+  padding: 5px;
+  border: 30px;
+}
+
+.cara{
+  text-align: center;
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+/*Estilo para las imagenes*/
+.image-gallery {
+  position: relative;
+}
+
+.images {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.images img {
+  align-items: center;
+  width: 75%;
+  height: auto;
+  display: block; /* Convierte la imagen en un bloque para poder aplicar márgenes automáticos */
+  margin: 0 auto; /* Margen automático horizontal para centrar la imagen */
+  max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+  max-height: 100%; /* Asegura que la imagen no se salga del contenedor */
+}
+
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/*Estilos para tb*/
+/*even para impares*/
+.table tr:nth-child(even) {
+  background-color: #f3e5f5;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table td,
+.table th {
+  padding: 1em;
+  text-align: left;
+  border-spacing: 0;
+  text-align: center;
+}
+
+/*BOrde solido*/
+td {
+  border-spacing: 0;
+  font-weight: 700;
+}
+
+.requerimientos{
+  padding: 20px;
+  font-size: 20px;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+dd{
+  font-size: 20px;
+  color: black;
+  font-size: 700;
+}
