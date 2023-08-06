@@ -280,25 +280,3 @@ dd{
   color: black;
   font-size: 700;
 }
-
-/* Estilos generales */
-
-/* Estilos para dispositivos con ancho menor a 768px (tabletas y móviles) */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* Reducir el tamaño de fuente */
-  }
-  
-  .container {
-    width: 100%; /* Ajustar ancho del contenedor */
-    padding: 10px; /* Agregar espacio alrededor del contenido */
-  }
-  
-  /* Ajustar estilos de la cabecera, contenido y otros elementos según sea necesario */
-  
-  /* Por ejemplo: */
-  .content {
-    text-align: center; /* Centrar el contenido en dispositivos pequeños */
-  }
-  
-}
